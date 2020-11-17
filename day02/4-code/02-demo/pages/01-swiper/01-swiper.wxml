@@ -1,0 +1,24 @@
+<!-- 使用轮播图 -->
+<!-- 
+  indicator-dots：提示点
+  autoplay：自动轮播
+  interval：等待的时间
+  duration: 动画持续的时长
+  circular: 是否采用衔接动画
+ -->
+<!-- 
+   1.0 block 与 vue 中的 template 一样
+   2.0 元素如果没有设置值，默认为 true
+  -->
+
+<swiper indicator-dots autoplay interval="2000" duration="500" circular>
+  <block wx:for="{{background}}" wx:key="*this">
+    <swiper-item>
+      <view class="swiper-item {{item}}"></view>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view>
+  {{ myname }} ------ {{ myage }}
+</view>

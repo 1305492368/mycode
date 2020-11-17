@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>history原理</title>
+</head>
+<body>
+    显示区域：
+    <div id="app"></div>
+    <a href="javascript:;" onclick="goHistory('/user')">user</a>
+    <a href="javascript:;" onclick="goHistory('/goods')">goods</a>
+    <script>
+        //点击的时候
+        goHistory = (url)=>{
+            let text = '';
+            // 判断用户点击哪个界面
+            switch(url){
+                case '/user':
+                    text = '用户界面';
+                    break;
+                case '/goods':
+                    text = '商品界面';
+                    break;
+            }
+            //判断后做响应url的改变
+            history.pushState({},'',url);
+            document.getElementById('app').innerHTML = text;
+        }
+
+        //当页面加载刷新的时候
+        window.onload = ()=>{
+            let text2 = '';
+            //获取当前的path路径
+            let path = window.location.pathname;
+            // 判断用户点击哪个界面
+            switch(path){
+                case '/user':
+                    text2 = '用户界面';
+                    break;
+                case '/goods':
+                    text2 = '商品界面';
+                    break;
+            }
+            document.getElementById('app').innerHTML = text2;
+        }
+        
+    </script>
+</body>
+</html>

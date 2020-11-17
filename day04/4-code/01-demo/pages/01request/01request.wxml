@@ -1,0 +1,5 @@
+<view>1.0 在小程序中发送异步请求</view>
+<!-- 在小程序中不支持 axios & ajax 如果要发送请求应该使用 小程序中自己的方式 -->
+<view>
+  <button bindtap="fn">点我发送异步请求</button>
+</view>

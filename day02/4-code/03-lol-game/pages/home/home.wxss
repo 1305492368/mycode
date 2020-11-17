@@ -1,0 +1,25 @@
+/* pages/home/home.wxss */
+page {
+  background-color: #566a78;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  width: 33.33%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.item image {
+  width: 88px;
+  height: 88px;
+}
+
+.item text {
+  display: block;
+  font-size: 14px;
+}

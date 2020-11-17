@@ -1,0 +1,15 @@
+<view>
+  小程序中的数据缓存
+</view>
+<view>
+1.0 向 storage 中存入内容
+</view>
+<button bindtap="savefn">存</button>
+<view>
+2.0 从 storage 中取出内容
+</view>
+<button bindtap="getfn">取</button>
+<view>
+3.0 从 storage 中删除内容
+</view>
+<button bindtap="delfn">删</button>

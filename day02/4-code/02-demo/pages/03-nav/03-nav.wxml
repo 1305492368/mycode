@@ -1,0 +1,4 @@
+<!-- 声明式导航 -->
+<navigator url="pages/01-swiper/01-swiper?name=xjj&age=19">跳转至 detail</navigator>
+<!-- 编程式导航 -->
+<button bindtap="toDetail">跳转 detail</button>

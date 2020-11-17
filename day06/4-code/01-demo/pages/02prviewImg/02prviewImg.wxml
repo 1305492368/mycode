@@ -1,0 +1,4 @@
+<button bindtap="fn">点我开启预览界面</button>
+<view>
+  <navigator url="/pages/01img/01img">To 01</navigator>
+</view>

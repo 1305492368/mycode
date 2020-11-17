@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h3>请选择你的技能：</h3>
+        <p>
+            <label for="html">html</label>
+            <input id="html" type="checkbox" v-model="ishtml">
+        </p>
+        <p>
+            <label for="css">css</label>
+            <input id="css" type="checkbox" v-model="iscss">
+        </p>
+        <p>
+            <label for="js">js</label>
+            <input id="js" type="checkbox" v-model="isjs">
+        </p>
+        <div>
+            ishtml: {{ ishtml }}<br />
+            iscss: {{ iscss }}<br />
+            isjs: {{ isjs }}<br />
+        </div>
+        <hr />
+        <hr />
+        <h3>全选</h3>
+        <p>
+            <label for="all">全选</label>
+            <input type="checkbox" v-model="isall">
+        </p>
+    </div>
+</body>
+<script src="./vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            ishtml: false,
+            iscss: false,
+            isjs: false
+        },
+        computed: {
+            isall: {
+                get: function () {
+                    // 原则：上面三个属性全为 true ，才为 true, 否则为 false
+                    return this.ishtml && this.iscss && this.isjs
+                },
+                set: function (value) {
+                    this.ishtml = value
+                    this.iscss = value
+                    this.isjs = value
+                }
+            }
+        }
+    })
+
+</script>
+
+</html>

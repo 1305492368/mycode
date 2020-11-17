@@ -1,0 +1,10 @@
+/* pages/01img/01img.wxss */
+.box {
+  width: 200rpx;
+}
+
+.box image {
+  width: 300rpx;
+  height: 300rpx;
+  border: 8rpx solid #ccc;
+}

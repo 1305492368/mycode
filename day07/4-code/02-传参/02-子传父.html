@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>子传父</title>
+    <style>
+        .f {
+            border: 4px solid #ccc;
+        }
+
+        .s {
+            border: 4px solid pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app" class="f">
+        <h2>父组件</h2>
+        <div>msg: {{ msg }}</div>
+        <son @passvalue="passvalue"></son>
+    </div>
+</body>
+<script src="./vue.js"></script>
+<script>
+    Vue.component('son', {
+        template: `<div class="s">
+            <h3>我是子组件</h3>
+            <div>msg: {{ msg }}</div>
+            <button @click="fn">点我传参</button>
+        </div>`,
+        data() {
+            return {
+                msg: 'son'
+            }
+        },
+        methods: {
+            fn() {
+                this.$emit('passvalue')
+            }
+        }
+    })
+    new Vue({
+        el: '#app',
+        data: {
+            msg: ''
+        },
+        methods: {
+            passvalue() {
+                console.log('虽然你点的子组件中的按钮，但是触发的是父组件中的 passvalue 事件')
+            }
+        }
+    })
+</script>
+
+</html>

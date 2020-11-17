@@ -1,0 +1,93 @@
+{
+	"mix-access-token": {
+		"data": []
+	},
+	"mix-address": {
+		"data": []
+	},
+	"mix-admin": {
+		"data": []
+	},
+	"mix-advert": {
+		"data": []
+	},
+	"mix-article": {
+		"data": []
+	},
+	"mix-cart": {
+		"data": []
+	},
+	"mix-express": {
+		"data": []
+	},
+	"mix-favorite": {
+		"data": []
+	},
+	"mix-feedback": {
+		"data": []
+	},
+	"mix-money-log": {
+		"data": []
+	},
+	"mix-notice": {
+		"data": []
+	},
+	"mix-order": {
+		"data": []
+	},
+	"mix-product": {
+		"data": []
+	},
+	"mix-product-category": {
+		"data": []
+	},
+	"mix-rating": {
+		"data": []
+	},
+	"mix-recharge": {
+		"data": []
+	},
+	"mix-roles": {
+		"data": []
+	},
+	"mix-search-keyword": {
+		"data": []
+	},
+	"mix-sku": {
+		"data": []
+	},
+	"mix-sms-code": {
+		"data": []
+	},
+	"mix-uni-id-users": {
+		"data": []
+	},
+	"mix-withdraw": {
+		"data": []
+	},
+	"mix-coupon": {
+		"data": []
+	},
+	"mix-user-coupon": {
+		"data": []
+	},
+	"mix-full-reduction": {
+		"data": []
+	},
+	"mix-version": {
+		"data": []
+	},
+	"mix-article-category": {
+		"data": [{
+			"_id": "08e51e265f1c084e0070678879c0ca8e",
+			"add_time": 1595672654140,
+			"name": "用户服务协议",
+			"status": 1
+		}, {
+			"_id": "9bf625a55f1c0857006b916513303866",
+			"name": "隐私权政策",
+			"status": 1,
+			"add_time": 1595672663173
+		}]
+	}
+}

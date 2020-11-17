@@ -1,0 +1,12 @@
+/* pages/05-changeimg/05-changeimg.wxss */
+.box {
+  text-align: center;
+}
+.title {
+  font-size: 20px;
+  font-weight: 700;
+}
+image {
+  width: 200px;
+  height: 200px;
+}

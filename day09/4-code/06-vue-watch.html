@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <p>
+            姓：<input type="text" v-model="firstname">
+        </p>
+        <p>
+            名：<input type="text" v-model="lastname">
+        </p>
+        <p>
+            姓名: {{ fullname }}
+        </p>
+    </div>
+</body>
+<script src="./vue.js"></script>
+<script>
+    // watch：
+    //     1.0 只要被监听的数据发生改变，就会触发对应的逻辑代码
+    //     2.0 如果被监听的数据是一个对象，
+    //          对象中的属性发生改变时，监听器是不会触发的
+    //     3.0 用在数组中同样合适
+    new Vue({
+        el: '#app',
+        data: {
+            firstname: '',
+            lastname: '',
+            fullname: ''
+        },
+        watch: {
+            firstname: function () {
+                this.fullname = this.firstname + this.lastname
+            },
+            lastname: function () {
+                this.fullname = this.firstname + this.lastname
+            }
+        }
+    })
+</script>
+
+</html>

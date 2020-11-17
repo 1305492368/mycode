@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- vue-router 原理：vue-router 内部到底是如何跳转的 -->
+    <div id="app"></div>
+    <a href="#/home">home</a>
+    <a href="#/user">user</a>
+</body>
+<script>
+    // 当页面的 hash 值发生改才会改变
+    window.onhashchange = function () {
+        // 判断 hash
+        var hash = window.location.hash
+        if (hash === '#/home') {
+            document.querySelector('#app').innerHTML = '我是 home'
+        } else if (hash === '#/user') {
+            document.querySelector('#app').innerHTML = '我是 user'
+        }
+    }
+    // 总结：
+    // 1.0 vue 单页面应用 => 所有的页面都在一个 html 中显示
+    // 2.0 为了实现页面的跳转（假跳转：切换显示的内容）：我们使用 vue-router 来进行切换
+    // 3.0 vue-router 的原理是什么（为什么在一个 html 可以通过 vue-router 来实现内容的切换）
+</script>
+</html>

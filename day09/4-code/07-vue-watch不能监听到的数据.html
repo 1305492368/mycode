@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        姓名：<input type="text" v-model="obj.name" /><br />
+        年龄：<input type="text" v-model="obj.age"> <br />
+        <button @click="fn">点我修改 obj</button>
+    </div>
+</body>
+<script src="./vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            obj: {
+                name: 'xjj',
+                age: 18,
+                gender: true,
+                height: 190,
+                weight: 180
+            }
+        },
+        methods: {
+            fn() {
+                this.obj = {} // 修改了 obj 中的内在的指向
+                // this.obj.name = 'bjj'
+            }
+        },
+        watch: {
+            
+            // 在 obj 对象被改变才会触发
+            'obj.name': function () {
+                console.log('obj改变了')
+            },
+            'obj.age': function () {
+                console.log('obj改变了')
+            }
+        }
+    })
+</script>
+
+</html>

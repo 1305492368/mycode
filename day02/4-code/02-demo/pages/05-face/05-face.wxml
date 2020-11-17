@@ -1,0 +1,5 @@
+<!-- currentTarget: 注册事件所在的 dom -->
+<!-- target：事件触发的 dom -->
+<view bindtap="myclick" data-id="f" class="f">
+  <view data-id="s" class="s"></view>
+</view>

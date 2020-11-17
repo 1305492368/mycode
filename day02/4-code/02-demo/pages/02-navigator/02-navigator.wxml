@@ -1,0 +1,2 @@
+<!-- 跳转到 /pages/01-swiper/01-swiper 中 -->
+<navigator url="/pages/01-swiper/01-swiper?name=xjj&age=18">跳转到 01-swiper 中</navigator>

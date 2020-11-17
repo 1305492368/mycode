@@ -1,0 +1,4 @@
+/* pages/02-down/02-down.wxss */
+page {
+  background-color: #ccc;
+}

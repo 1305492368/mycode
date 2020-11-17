@@ -1,0 +1,7 @@
+<view>input 组件</view>
+<!-- 
+  1.0 input 默认没有边框
+  2.0 type ： text / number / idcard / confirm-type
+ -->
+<view>msg: {{ msg }}</view>
+<input type="text" class="ipt" bindconfirm="myconfirm" bindinput="fn" value="{{msg}}" />

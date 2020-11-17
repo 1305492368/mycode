@@ -1,0 +1,23 @@
+.box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  width: 33.33%;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.item image {
+  width: 70px;
+  height: 70px;
+}
+
+.item text {
+  display: block;
+  font-size: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

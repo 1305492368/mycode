@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // findIndex: 找到满足条件元素的下标
+    var arr = [
+        { name: 'aa', age: 2 },
+        { name: 'bb', age: 9 },
+        { name: 'cc', age: 11 }
+    ]
+    // 需求：找到数组中第一个大于 8 的元素下标
+    var index = arr.findIndex(item => {
+        return item.age > 8
+    })
+    console.log(index)
+</script>
+
+</html>

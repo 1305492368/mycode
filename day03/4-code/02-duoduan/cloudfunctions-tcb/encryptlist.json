@@ -1,0 +1,7 @@
+{
+	"encryptFunctionList": [
+		"mix-address",
+		"mix-order",
+		"mix-user"
+	]
+}

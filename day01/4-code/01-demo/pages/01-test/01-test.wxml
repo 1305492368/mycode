@@ -1,0 +1,9 @@
+<view class="box">
+  <image class="img" src="/imgs/xx.jpg"></image>
+  <view class="txt">
+    <text>我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容</text>
+  </view>
+  <view class="price">
+    <text class="p1">￥</text><text class="p2">126.00</text>
+  </view>
+</view>

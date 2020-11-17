@@ -1,0 +1,7 @@
+/* pages/05pagescroll/05pagescroll.wxss */
+.box {
+  width: 300rpx;
+  height: 2000rpx;
+  background-color: pink;
+  margin: 0 auto;
+}

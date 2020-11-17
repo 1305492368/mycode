@@ -1,0 +1,7 @@
+<!-- lol - 列表页面 -->
+<view class="box">
+  <view bindtap="toDetail" data-id="{{ item.id }}" class="item" wx:for="{{ heroList }}" wx:key="*this">
+    <image src="{{ item.iconUrl }}"></image>
+    <text>{{ item.name }}</text>
+  </view>
+</view>

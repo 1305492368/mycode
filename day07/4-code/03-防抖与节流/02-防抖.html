@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02-防抖</title>
+    <style>
+        .box {
+            width: 800px;
+            height: 2000px;
+            background-color: pink;
+            margin: 0 auto;
+            border: 10px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+<script>
+    // 防抖：
+    // - 当触发停止时，过一段时间再执行逻辑代码
+    // - 当持续触发事件时，不执行逻辑代码
+
+    // 定义一个定时器
+    var timer = null
+    window.onscroll = function () { // 12 次连接执行
+        // 每次进来之前，将之前的定时器清除掉
+        clearTimeout(timer)
+        timer = setTimeout(() => {
+            console.log('onscroll')
+        }, 1000);
+    }
+
+    // 第一次： timer = null , 清除 timer ，设置定时器：1s 之后打印 onscroll
+    // 第二次： timer: 1s 后打印 onscroll, 清除 timer，设置定时器：1s 之后打印 onscroll
+    // 第三次： timer: 1s 后打印 onscroll, 清除 timer，设置定时器：1s 之后打印 onscroll、
+    // ......
+    // 第十二次： timer: 1s 后打印 onscroll, 清除 timer，设置定时器：1s 之后打印 onscroll
+
+</script>
+
+</html>

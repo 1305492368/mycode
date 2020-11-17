@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>父传子</title>
+    <style>
+        .f {
+            border: 4px solid #ccc;
+        }
+
+        .s {
+            border: 4px solid pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app" class="f">
+        <h2>父组件</h2>
+        <div>msg: {{ msg }}</div>
+        <input type="text" v-model="msg">
+        <son :msg="msg"></son>
+    </div>
+</body>
+<script src="./vue.js"></script>
+<script>
+    // 定义子组件
+    //   单向数据流：父组件给子组件传参之后，子组件不能修改父组件中传入的内容，但是父组件中的数据发生改变会影响到子组件
+    // 需求：
+    //   1.0 希望在子组中修改 msg,
+    //      用另一个属性将 msg 保存起来， 将来要改，改变保存的那个属性
+    //   2.0 子组件中修改之后不会影响到父组件
+    //   3.0 父组件中修改之后依旧会影响到子组件
+    //       msg 每次改变之后都会传入到子组件，可以在子组件中通过 watch 来监听 msg 的改变
+    //       每次改变将新的值赋值给 mymsg
+    Vue.component('son', {
+        template: `<div class="s">
+            <h3>我是子组件</h3>
+            <div>msg: {{ msg }}</div>
+            <div>mymsg: {{ mymsg }}</div>
+            <input type="text" v-model="mymsg" />
+        </div>`,
+        props: ['msg'],
+        data() {
+            return {
+                mymsg: this.msg
+            }
+        },
+        watch: {
+            msg() {
+                this.mymsg = this.msg
+            }
+        }
+    })
+    new Vue({
+        el: '#app',
+        data: {
+            msg: 'father'
+        }
+    })
+</script>
+
+</html>

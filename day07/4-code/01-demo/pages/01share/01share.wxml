@@ -1,0 +1,4 @@
+<!--pages/01share/01share.wxml-->
+<text>pages/01share/01share.wxml</text>
+<view>点击一个按钮进分享</view>
+<button open-type="share">分享</button>

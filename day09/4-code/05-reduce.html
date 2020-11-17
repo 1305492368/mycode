@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // reduce:
+    // //  可以遍历数组，并且得到每个元素相加的和
+    // var arr = [1, 2, 3, 4, 5, 6, 7] // 28
+    // // 需求：得到所有元素的和
+    // var value = arr.reduce((sum, item) => {
+    //     return sum + item
+    // })
+    // console.log(value)
+
+    // var arr = [
+    //     { name: 'aa', num: 5 },
+    //     { name: 'bb', num: 15 },
+    //     { name: 'cc', num: 25 },
+    //     { name: 'dd', num: 35 }
+    // ]
+    // var value = arr.reduce((sum, item) => {
+    //     return sum.num + item.num
+    // })
+    // console.log(value)
+    // // 第一次：
+    // //  sum: { name: 'aa', num: 5 } item: { name: 'bb', num: 15 }
+    // //  sum: 20 
+    // // 第二次：
+    // //  sum: 20 item:{ name: 'cc', num: 25 }
+    
+    var arr = [
+        { name: 'aa', num: 5 },
+        { name: 'bb', num: 15 },
+        { name: 'cc', num: 25 },
+        { name: 'dd', num: 35 }
+    ]
+    var value = arr.reduce((sum, item) => {
+        return sum + item.num
+    }, 0)
+    console.log(value)
+    // 第一次；
+    //  sum: 0 item: { name: 'aa', num: 5 }
+    //  sum: 5
+    // 第二次：
+    //  sum: 5 item: { name: 'bb', num: 15 }
+    //  sum: 20
+    // ...
+    //  sum: 80
+</script>
+
+</html>

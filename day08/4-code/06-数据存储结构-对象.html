@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="add1">点我添加夏普</button>
+    <button id="add2">点我添加TCL</button>
+    <button id="add3">点我添加小米</button>
+    <button id="btn">点我得到 id 为 3 的商品</button>
+</body>
+<script>
+    // 用数组保存购物车中的商品信息
+    // 商品 Id & 商品状态 & 商品数量
+    var obj = {
+        // key: value
+        // 商品 id ：商品对象
+    }
+
+    // 实现add 方法
+    document.querySelector('#add1').onclick = function () {
+        obj[1] = {
+            goods_id: 1,
+            goods_check: true,
+            goods_num: 1
+        }
+    }
+    document.querySelector('#add2').onclick = function () {
+        obj[2] = {
+            goods_id: 2,
+            goods_check: true,
+            goods_num: 1
+        }
+    }
+    document.querySelector('#add3').onclick = function () {
+        obj[3] = {
+            goods_id: 3,
+            goods_check: true,
+            goods_num: 1
+        }
+    }
+
+    // 得到 id 为 3 的成员
+    document.querySelector('#btn').onclick = function () {
+        console.log(obj[3])
+    }
+
+</script>
+
+</html>

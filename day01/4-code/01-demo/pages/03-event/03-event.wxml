@@ -1,0 +1,6 @@
+<!-- 小程序中的事件注册 -->
+<view>
+  <!-- bindtap: 给移动端的元素绑定‘轻触’事件 -->
+  <button bindtap="fn">点我触发事件</button>
+  <button bindtap="showtost">点我显示弹框</button>
+</view>

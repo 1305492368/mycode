@@ -1,0 +1,5 @@
+/* pages/04-eventdata/04-eventdata.wxss */
+.item {
+  border: 4px solid #ccc;
+  padding: 5px;
+}

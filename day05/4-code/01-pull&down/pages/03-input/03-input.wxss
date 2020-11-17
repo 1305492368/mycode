@@ -1,0 +1,4 @@
+/* pages/03-input/03-input.wxss */
+.ipt {
+  border: 2px solid #ccc;
+}

@@ -1,0 +1,20 @@
+<!-- 添加一个文本 -->
+<!-- <span>我是一段文本</span> -->
+<!-- 添加一个容器 -->
+<!-- <div>我是一个 div</div> -->
+<!-- 添加一个文本域 -->
+<!-- <textarea>我是 textarea</textarea> -->
+
+<!-- 使用 text 组件来显示文件 -->
+<text>我是 text 组件</text>
+
+<!-- view 组件：相当于  div -->
+<view>我是 view</view>
+
+<!-- image 组件：相当于 img -->
+<image src="/imgs/xx.jpg"></image>
+
+<!-- button 组件：按钮 -->
+<button size="mini">点我有惊喜</button>
+<button size="mini">点我有惊喜</button>
+<button>点我有惊喜</button>

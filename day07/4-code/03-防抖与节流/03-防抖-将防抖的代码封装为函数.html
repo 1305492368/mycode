@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>将防抖的代码封装为函数</title>
+    <style>
+        .box {
+            width: 800px;
+            height: 2000px;
+            background-color: pink;
+            margin: 0 auto;
+            border: 10px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+<script>
+    // 方法：防抖
+    function fangdou(time, callback) {
+        // 定义一个定时器
+        var timer = null
+        return function () {
+            clearTimeout(timer) // 在一个作用域中访问另一个作用域中的变量：构成了闭包（面试题：说说你在实际开发中闭包的使用场景）
+            timer = setTimeout(() => {
+                // console.log('onscroll')
+                callback()
+            }, time);
+        }
+    }
+
+    // 给窗口添加滚动事件
+    window.onscroll = fangdou(1000, () => {
+        console.log('onscroll')
+    })
+
+    // 复习：函数名后面加括号是什么意思 ：
+    // function fn () {
+    //     return 'aa'
+    // }
+    // var a = fn // 将 fn 方法赋值给 a
+    // var b = fn() // 将 fn 方法执行后的返回值交给 b
+</script>
+
+</html>

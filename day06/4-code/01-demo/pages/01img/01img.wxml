@@ -1,0 +1,31 @@
+<view>切换到 tabBar</view>
+<button bindtap="fn">ToTbar</button>
+<view>scaleToFill: 不保持纵横比，短边拉伸(默认值)</view>
+<view class="box">
+  <image src="../../imgs/1.jpg" mode="scaleToFill"></image>
+  <image src="../../imgs/2.jpg" mode="scaleToFill"></image>
+</view>
+
+<view>aspectFit 保持纵横比，长边显示，短边留空</view>
+<view class="box">
+  <!-- 宽比高要长 -->
+  <image src="../../imgs/1.jpg" mode="aspectFit"></image>
+  <!-- 高比宽要长 -->
+  <image src="../../imgs/2.jpg" mode="aspectFit"></image>
+</view>
+
+<view>aspectFill：保持纵横比，短边显示，长边截取</view>
+<view class="box">
+  <!-- 宽比高要长 -->
+  <image src="../../imgs/1.jpg" mode="aspectFill"></image>
+  <!-- 高比宽要长 -->
+  <image src="../../imgs/2.jpg" mode="aspectFill"></image>
+</view>
+
+<view>widthFix : 保持纵横比,宽度不变，高度自动变化</view>
+<view class="box">
+  <!-- 宽比高要长 -->
+  <image src="../../imgs/1.jpg" mode="widthFix"></image>
+  <!-- 高比宽要长 -->
+  <image src="../../imgs/2.jpg" mode="widthFix"></image>
+</view>

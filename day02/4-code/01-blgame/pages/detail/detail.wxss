@@ -1,0 +1,10 @@
+.con {
+  text-align: center;
+}
+.con image {
+  width: 200px;
+  height: 200px;
+}
+.con text {
+  display: block;
+}

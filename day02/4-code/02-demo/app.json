@@ -1,0 +1,19 @@
+{
+  "pages":[
+    "pages/05-face/05-face",
+    "pages/04-eventdata/04-eventdata",
+    "pages/03-nav/03-nav",
+    "pages/02-navigator/02-navigator",
+    "pages/01-swiper/01-swiper",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

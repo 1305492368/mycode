@@ -1,0 +1,8 @@
+<view class="con">
+  <!-- 英雄的头像 -->
+  <image src="{{ img }}"></image>
+  <!-- 英雄的名称 -->
+  <text>名称：{{ name }}</text>
+  <!-- 英雄的技能 -->
+  <text>技能：{{ skill }}</text>
+</view>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var arr = [1, 2, 3, 4, 5, 6, 7]
+    // 遍历： forEach 无法中断循环
+    // arr.forEach((item, index) => {
+    //     console.log(item, index)
+    // })
+    // 遍历： for of
+    // for (let item of arr) {
+    //     console.log(item)
+    // }
+
+    // 需求：得到数组中大于5的第一个元素
+    // // forEach
+    // arr.forEach((item, index) => {
+    //     if (item > 5) {
+    //         console.log(item)
+    //     }
+    // })
+    // for of
+    for(let item of arr) {
+        if (item > 5) {
+            console.log(item)
+            break
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <p>
+            姓：<input type="text" v-model="firtname">
+        </p>
+        <p>
+            名：<input type="text" v-model="lastname">
+        </p>
+        <p>
+            姓名：<span>{{ fullname }}</span>
+        </p>
+    </div>
+</body>
+<script src="./vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            firtname: '',
+            lastname: ''
+        },
+        computed: {
+            fullname() {
+                return this.firtname + ' ' + this.lastname
+                
+            }
+        }
+    })
+    // 计算属性：
+    //  1.0 会将计算结果进行缓存，
+    //  2.0 下次使用时，会先从缓存中得到，如果没有才会执行逻辑代码
+    //  3.0 当依赖项发生改变时，缓存才会更新
+    // 复习：
+    //  v-model:
+    //      Object.defineProperty()：可以给对象的属性添加两个方法
+    //          get：从属性中取值时触发
+    //          set：给属性赋值时触发
+</script>
+
+</html>

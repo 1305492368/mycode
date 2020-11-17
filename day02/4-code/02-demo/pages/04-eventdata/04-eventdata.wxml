@@ -1,0 +1,6 @@
+<view>
+  <!-- 传参：给事件所在的 dom 添加一个参数： data-参数 -->
+  <view bindtap="showname" data-myname="{{item.name}}" class="item" wx:for="{{arr}}" wx:key="id">
+    {{ item.name }}
+  </view>
+</view>

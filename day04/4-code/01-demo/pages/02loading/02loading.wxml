@@ -1,0 +1,6 @@
+<view>1.0 屏幕中央的 loading</view>
+<button bindtap="showLoading">显示 loading</button>
+<button bindtap="hideLoading">隐藏 loading</button>
+<view>2.0 导航栏中的 loading</view>
+<button bindtap="showNavLoading">显示 loading</button>
+<button bindtap="hideNavLoading">隐藏 loading</button>

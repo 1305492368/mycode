@@ -1,0 +1,6 @@
+/* pages/01-up/01-up.wxss */
+.item {
+  line-height: 100rpx;
+  text-align: center;
+  border: 4rpx solid #ccc;
+}

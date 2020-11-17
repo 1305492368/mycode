@@ -1,0 +1,8 @@
+<view class="box">
+   <view class="title">图片切换</view>
+   <image src="{{ arr[currentIndex] }}"></image>
+   <view class="btns">
+     <button bindtap="pre"  size="mini">上一张</button>
+     <button bindtap="next" size="mini">下一张</button>
+   </view>
+</view>

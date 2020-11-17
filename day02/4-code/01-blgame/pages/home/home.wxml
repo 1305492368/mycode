@@ -1,0 +1,18 @@
+<!-- 声明式跳转 -->
+<view class="box">
+  <view class="item" wx:for="{{ heroList }}" wx:key="*this">
+    <navigator url="/pages/detail/detail?img={{item.icon}}&name={{ item.heroName }}&skill={{ item.skill }}">
+      <image src="{{ item.icon }}"></image>
+      <text>{{ item.heroName }}</text>
+    </navigator>
+  </view>
+</view>
+
+<!-- 编程式跳转 -->
+<!-- <view class="box">
+  <view bindtap="toDetail" data-name="{{ item.heroName }}" data-icon="{{ item.icon }}" data-skill="{{ item.skill }}"
+    class="item" wx:for="{{ heroList }}" wx:key="*this">
+    <image src="{{ item.icon }}"></image>
+    <text>{{ item.heroName }}</text>
+  </view>
+</view> -->

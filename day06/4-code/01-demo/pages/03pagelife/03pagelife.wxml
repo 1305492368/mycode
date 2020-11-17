@@ -1,0 +1,9 @@
+<!--pages/03pagelife/03pagelife.wxml-->
+<view>
+  跳转到： 非 tab 页面02prviewImg
+</view>
+<navigator url="/pages/02prviewImg/02prviewImg">to 02</navigator>
+<view>
+  跳转到 tab 页面 04tab1
+</view>
+<button bindtap="to04tab1">跳到 04tab1</button>

@@ -1,0 +1,11 @@
+/* pages/05-face/05-face.wxss */
+.f {
+  width: 200px;
+  height: 200px;
+  background-color: pink;
+}
+.s {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+}

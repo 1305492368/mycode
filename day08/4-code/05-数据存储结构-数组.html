@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="add1">点我添加夏普</button>
+    <button id="add2">点我添加TCL</button>
+    <button id="add3">点我添加小米</button>
+    <button id="btn">点我得到 id 为 3 的商品</button>
+</body>
+<script>
+    // 用数组保存购物车中的商品信息
+    // 商品 Id & 商品状态 & 商品数量
+    var arr = []
+    
+    // 实现add 方法
+    document.querySelector('#add1').onclick = function () {
+        // 向 arr 中添加一个商品数据
+        arr.push({
+            goods_id: 1,
+            goods_check: true,
+            goods_num: 1
+        })
+    }
+    document.querySelector('#add2').onclick = function () {
+        // 向 arr 中添加一个商品数据
+        arr.push({
+            goods_id: 2,
+            goods_check: true,
+            goods_num: 1
+        })
+    }
+    document.querySelector('#add3').onclick = function () {
+        // 向 arr 中添加一个商品数据
+        arr.push({
+            goods_id: 3,
+            goods_check: true,
+            goods_num: 1
+        })
+    }
+
+    // 得到 id 为 3 成员
+    document.querySelector('#btn').onclick = function () {
+        // 遍历 arr 判断 item 中的 id 与 3 是否相等
+        arr.forEach(item => {
+            if (item.goods_id === 3) {
+                console.log(item)
+            }
+        })
+    }
+
+    // 优点：
+    //      存储的数据是有顺序的
+    // 缺点：
+    //      取值不方便
+
+</script>
+</html>

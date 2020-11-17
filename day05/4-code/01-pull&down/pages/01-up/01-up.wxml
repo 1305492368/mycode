@@ -1,0 +1,5 @@
+<view>
+  <view class="item" wx:for="{{ arr }}" wx:key="*this">
+    {{ item }}
+  </view>
+</view>

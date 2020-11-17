@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        姓名：<input type="text" v-model="obj.name" /><br />
+        年龄：<input type="text" v-model="obj.age"> <br />
+        性别：<input type="text" v-model="obj.gender">
+    </div>
+</body>
+<script src="./vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            obj: {
+                name: 'xjj',
+                age: 18,
+                gender: '男'
+            }
+        },
+        watch: {
+            obj: {
+                // 当 obj 改变时会被触发
+                handler: function () {
+                    console.log('obj 改变了')
+                },
+                // 开启深试监听: 将来只要 obj 中的任何一个属性发生改变了，都会触发上面的方法
+                deep: true
+            },
+            // 等价于：
+            // obj() {
+            //     console.log('obj 改变了')
+            // }
+        }
+    })
+</script>
+
+</html>

@@ -1,0 +1,22 @@
+<!-- 使用 {{}} : 文本渲染 -->
+<view>
+  <text>{{ msg }}</text>
+</view>
+
+<!-- 使用 {{}} ： 绑定属性 -->
+<view>
+  <image src="{{ imgSrc }}"></image>
+</view>
+
+<!-- 使用 {{}} & wx:if 按钮元素的显示与隐藏 -->
+<view>
+  <text wx:if="{{ show }}">男</text>
+  <text wx:else>女</text>
+</view>
+
+<!-- 使用 {{}} & wx:for 完成数据的遍历 -->
+<view>
+  <view wx:for="{{ arr }}">
+    {{ item.name }} ---- {{ index }}
+  </view>
+</view>

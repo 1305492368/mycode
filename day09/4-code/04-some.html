@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // some:
+    //  遍历数组，判断数据中是否有一个元素满足条件
+    var arr = [2, 5, -76, 1, 8]
+    // 需求：判断数组中是有小 0 的元素存在
+    var bool = arr.some(item => {
+        return item < 0
+    })
+    console.log(bool)
+</script>
+</html>

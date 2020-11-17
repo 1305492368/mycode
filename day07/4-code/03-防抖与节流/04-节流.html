@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>窗口的滚动触发抖动</title>
+    <style>
+        .box {
+            width: 800px;
+            height: 2000px;
+            background-color: pink;
+            margin: 0 auto;
+            border: 10px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+<script>
+    // 节流的特点：
+    // - 当持续触发事件时，每隔固定时间也会执行一次逻辑代码
+    // - 当触发停止时，过一段时间再执行逻辑代码
+
+    // 创建一个开始时间
+    var beginTime = Date.now()
+    // 定义一个定时器
+    var timer = null
+    // 给窗口添加滚动事件
+    window.onscroll = function () { // 1000 次（连续执行的）
+        // 清除定时器
+        clearTimeout(timer)
+        // 得到当前时间
+        var currentTime = Date.now()
+        // 得到一个时间间隔
+        var space = currentTime - beginTime
+        // 如果时间间隔大于 1000 ,就执行逻辑
+        if (space > 1000) {
+            console.log('onscroll')
+            // 由于上一次已经执行完成，开始时间应该变为现在的时间
+            beginTime = Date.now()
+        } else {
+            timer = setTimeout(() => {
+                console.log('onscroll')
+            }, 1000);
+        }
+    }
+    // 执行过程：
+    // 第一次：beginTime： 是打开页面的时间，得到当前时间与 beginTime 之间的时间差，
+    //      判断：时间差会大于 1s ，会执行 onscroll， 再将当前时间保存到 beginTime
+    // 第二次：beginTime：上次执行的时间，得到当前时间与 beginTime 之间的时间差
+    //      判断：时间差会小于 1s, 继续下一次
+    // 第三次：beginTime：第一次执行的时间，得到当前时间与 beginTime 之间的时间差，
+    //      判断：时间差会小于 1s, 继续下一次
+    // ..... (假设第 100 次时，时间刚好大于 1s)\
+    // 第 100 次： beginTime：第一次执行的时间，得到当前时间与 beginTime 之间的时间差，
+    //      判断：时间差会大于 1s ，会执行 onscroll， 再将当前时间保存到 beginTime
+    // 第 101 次：  beginTime：第 100 次执行的时间，得到当前时间与 beginTime 之间的时间差，
+    //      判断：时间差会小于 1s, 继续下一次
+
+</script>
+
+</html>

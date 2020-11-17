@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>窗口的滚动触发抖动</title>
+    <style>
+        .box {
+            width: 800px;
+            height: 2000px;
+            background-color: pink;
+            margin: 0 auto;
+            border: 10px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+<script>
+    // 节流的方法
+    function jieliu(time, cb) {
+        var timer = null
+        var beginTime = Date.now()
+        return function () {
+            clearTimeout(timer)
+            if (Date.now() - beginTime > time) {
+                cb()
+                beginTime = Date.now()
+            } else {
+                timer = setTimeout(() => {
+                    cb()
+                }, time);
+            }
+        }
+    }
+
+    // 给窗口添加滚动事件
+    window.onscroll = jieliu(1000, () => {
+        console.log('onscroll')
+    })
+
+</script>
+
+</html>
